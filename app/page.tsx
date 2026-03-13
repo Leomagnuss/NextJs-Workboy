@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage, AvatarBadge } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
-import { BadgeInfo, Settings, Heart, UserRoundPlus, UserRoundCheck, BookPlus   } from 'lucide-react';
+import { BadgeInfo, Settings, Heart, UserRoundPlus, UserRoundCheck, BookPlus, AtSign, PhoneIncoming, Send     } from 'lucide-react';
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button"
@@ -98,7 +98,65 @@ export default function Page() {
           </div>
         </Card>
       </div>
-
+      <div className="flex gap-5">
+        <Card className=" w-xl shadow pt-8">
+          <CardTitle className=" font-semibold pl-8 pr-8">
+            О себе
+          </CardTitle>
+          <CardDescription className="grid gap-6 scroll-m-20 text-sm text-balance pl-8 pr-8" >
+            <p>
+              Основное направление: оказание технической поддержки сотрудникам, вторая линия поддержки, 
+              решение инцидентов связанных с предоставлением прямых и удаленных доступов.
+            </p> 
+            <p>
+              Администрирование Active directory.
+              Администрирование терменальных серверов, информационных систем, файловых хранилищ и принтсерверов.
+              Установка, настрйока и сопровождение ПО.
+            </p> 
+            <p>
+              Коммутация сотрудников, резервация адресов.
+            </p>
+            <p>
+              Обслуживание, диагностика и малый ремонт
+              основных средств, периферии и оргтехники. <br />
+              Ведение учета и движение техники, ведение проекта по инвентаризации и списаниям. 
+              Составление инструкций, обучение новых сотрудников, подготовка техники и консультации по всем перечисленным пунктам. 
+            </p>
+            <p>
+              Решение инцидентов связанных с полиграфией, изображениями, дизайном и логотипами.
+            </p>
+          </CardDescription>
+          <div className=" flex flex-wrap gap-2 pl-8 pr-8">
+            <Badge variant="secondary">Active directory</Badge>
+            <Badge variant="secondary">SQL</Badge>
+            <Badge variant="secondary">Windows 7-11</Badge>
+            <Badge variant="secondary">Windows Server</Badge>
+            <Badge variant="secondary">DHCP</Badge>
+            <Badge variant="secondary">1С МДМ</Badge>
+            <Badge variant="secondary">1С УХ</Badge>
+            <Badge variant="secondary">Adobe</Badge>
+            <Badge variant="secondary">Figma</Badge>
+            <Badge variant="secondary">Photoshop</Badge>
+          </div>
+          <CardFooter className="grid gap-2 w-full font-semibold ">
+            <CardTitle className="font-semibold pl-4">
+              <p>Контакты</p>
+            </CardTitle>
+            <CardContent className="flex gap-2 content-center text-xs items-center">
+              <PhoneIncoming  className="size-4"/>+7 906 747 47 60
+            </CardContent>
+            <CardContent className="flex gap-2 content-center text-xs items-center">
+              <AtSign className="size-4"/>na.sokolov@jsa-group.ru
+            </CardContent>
+            <CardContent className="flex gap-2 content-center text-xs items-center">
+              <Send  className="size-4"/>@leomagnuss
+            </CardContent>
+          </CardFooter>
+        </Card>
+        <Card className="w-full max-w-7xl">
+          
+        </Card>
+      </div>
 
 
 
