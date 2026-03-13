@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage, AvatarBadge } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
-import { BadgeInfo, Settings  } from 'lucide-react';
+import { BadgeInfo, Settings, Heart, UserRoundPlus, UserRoundCheck, BookPlus   } from 'lucide-react';
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button"
@@ -18,7 +18,7 @@ import { ButtonGroup } from "@/components/ui/button-group"
 export default function Page() {
   return (
     
-    <div className="flex justify-center pt-5">
+    <div className="grid justify-center pt-5 gap-5">
       <Card className="w-full max-w-7xl shadow p-8">
         <div className="flex justify-between items-center">
           <div className="flex gap-8">
@@ -41,7 +41,7 @@ export default function Page() {
               <div>
                   <Badge variant="outline"><BadgeInfo />Специалист поддержки</Badge>
               </div>
-              <CardDescription>Сотрудник поддержки L2, качественная поддержка и администрирование сервисов, диагностика и обслуживание. </CardDescription>
+              <CardDescription className="scroll-m-20 text-sm text-balance">Сотрудник поддержки L2, качественная поддержка и администрирование сервисов, диагностика и обслуживание. </CardDescription>
             </div>
             <div className="flex flex-col items-start gap-8">
             <ButtonGroup>
@@ -60,6 +60,57 @@ export default function Page() {
           </div>
         </div>
       </Card>
+      <div className="">
+        <Card className="w-full p-5 shadow">
+          <div className="flex justify-around">
+            <div>
+              <CardTitle className="flex justify-center gap-2 text-center items-center text-3xl font-semibold">
+                <BookPlus strokeWidth={3} />8
+              </CardTitle>
+              <CardDescription className="text-center" >
+                Публикации
+              </CardDescription>
+            </div>
+            <div>
+              <CardTitle className="flex justify-center gap-2 text-center items-center text-3xl font-semibold">
+                <UserRoundPlus strokeWidth={3} />35
+              </CardTitle>
+              <CardDescription className="text-center" >
+                Подписчики
+              </CardDescription>
+            </div>
+            <div>
+              <CardTitle className="flex justify-center gap-2 text-center items-center text-3xl font-semibold">
+                <UserRoundCheck strokeWidth={3} />19
+              </CardTitle>
+              <CardDescription className="text-center" >
+                Подписки
+              </CardDescription>
+            </div>
+            <div>
+              <CardTitle className="flex justify-center gap-2 text-center items-center text-3xl font-semibold">
+                <Heart strokeWidth={3} />394 
+              </CardTitle>
+              <CardDescription className="text-center" >
+                Лайки
+              </CardDescription>
+            </div>
+          </div>
+        </Card>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
 
   );
